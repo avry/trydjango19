@@ -1,0 +1,32 @@
+<!--DOCTYPE html -->
+
+<html>
+
+
+<body>
+
+
+{% if messages %}
+<ul class="messages">
+	{% for message in messages %}
+	<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+
+
+<h1>{{ title }}</h1>
+
+
+{{ instance.title }}<br/>
+{{ instance.content }}<br/>
+{{ instance.timestamp }}<br/>
+{{ instance.updated }}<br/>
+{{ instance.id }}<br/>
+
+<a href = '{% url "posts:list" %}'>back</a>
+</body>
+
+
+
+</html>

@@ -1,0 +1,23 @@
+<!--DOCTYPE html -->
+
+<html>
+
+
+<body>
+
+<h1>{{ title }} is working</h1>
+
+{% for objs in objects_list %}
+
+<a href = '{% url "posts:detail" objs.id %}'>{{ objs.title }}</a><br/>
+{{ objs.content }}<br/>
+{{ objs.timestamp }}<br/>
+{{ objs.updated }}<br/>
+{{ objs.id }}<br/>
+
+{% endfor %}
+
+</body>
+
+
+</html>
