@@ -1,21 +1,14 @@
 {% extends "base.html" %}
-
-
 {% block content %}
-
-
-<h1>{{ title }} is working</h1>
-
+	<h1>{{ title }}</h1>
 {% for objs in objects_list %}
-
-<a href = '{% url "posts:detail" objs.id %}'>{{ objs.title }}</a><br/>
-{{ objs.content }}<br/>
-{{ objs.timestamp }}<br/>
-{{ objs.updated }}<br/>
-{{ objs.id }}<br/>
-
+<div class="card" style="width: 18rem;">
+	<div class="card-body">
+		<!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    	<h5 class="card-title"><a href = '{% url "posts:detail" objs.id %}'>{{ objs.title }}</a> <small>{{ objs.timestamp|timesince }}</small></h5>
+    	<p class="card-text">{{ objs.content|linebreaks|truncatechars:120 }}</p>
+    	<a href='{% url "posts:detail" objs.id %}' class="btn btn-primary">view</a>
+  	</div>
+</div>
 {% endfor %}
-
-
-
 {% endblock content %}
