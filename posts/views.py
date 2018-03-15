@@ -1,3 +1,5 @@
+from urllib.parse import quote_plus
+
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect 
 from django.urls import reverse
@@ -10,7 +12,7 @@ from . models import Post
 
 
 def post_create(request):
-	form = PostForm(request.POST or None)
+	form = PostForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
 		print("valid")
 		instance = form.save(commit=False) #form is saved
@@ -30,9 +32,11 @@ def post_create(request):
 
 def post_detail(request, id=None):
 	instance = get_object_or_404(Post, id = id)
+	share_string = quote_plus(instance.content)
 	context = {
 		"title": instance.title,
 		"instance": instance,
+		"share_string": share_string,
 	}
 	return render(request, "post_detail.html", context)
 
@@ -67,7 +71,7 @@ def post_list(request):
 def post_update(request, id=None):
 	instance = get_object_or_404(Post, id = id)
 
-	form = PostForm(request.POST or None, instance=instance)
+	form = PostForm(request.POST or None, request.FILES or None, instance=instance)
 	if form.is_valid():
 		print("valid")
 		instance = form.save(commit=False) #form is saved

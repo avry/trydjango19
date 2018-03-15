@@ -4,6 +4,9 @@
 	<h1>{{ title }}</h1>
 {% for objs in objects_list %}
 	<div class="card" style="width: 18rem;">
+		{% if objs.image %}
+		<img class="card-img-top" src='{{ objs.image.url }}' class='img-responsive' />
+		{% endif %}
 		<div class="card-body">
 			<!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
 	    	<h5 class="card-title"><a href = '{% url "posts:detail" objs.id %}'>{{ objs.title }}</a> <small>{{ objs.timestamp|timesince }}</small></h5>
