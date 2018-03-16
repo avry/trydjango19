@@ -11,14 +11,14 @@
 	<img src='{{ instance.image.url }}' class='img-responsive' />
 	{% endif %}
 
-	<h1>{{ title }}<small>{{ instance.timestamp }}</small></h1>
+	<h1>{{ title }}<small>{{ instance.timestamp|timesince }}</small></h1> <!--this is a built-in filter that is provided -->
 	{{ instance.content|linebreaks }}<br/>
 
 	{{ share_string }}
 
 	<a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/">Facebook</a>
 
-	<a href="https://twitter.com/home?status={{ instance.content|urlify }}%20">Twitter</a>
+	<a href="https://twitter.com/home?status={{ instance.content|urlify }}%20">Twitter</a> <!--this uses a custom filter that we implemented -->
 
 	<a href='https://plus.google.com/share?url=http://codingforentrepreneurs.com'>Google+</a>
 
