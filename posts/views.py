@@ -31,6 +31,7 @@ def post_create(request):
 
 
 def post_detail(request, id=None):
+	# register.filter('urlify', urlify)
 	instance = get_object_or_404(Post, id = id)
 	share_string = quote_plus(instance.content)
 	context = {

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load urlify %}
 
 
 {% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock head_title %}
@@ -17,7 +18,7 @@
 
 	<a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/">Facebook</a>
 
-	<a href="https://twitter.com/home?status={{ share_string }}%20">Twitter</a>
+	<a href="https://twitter.com/home?status={{ instance.content|urlify }}%20">Twitter</a>
 
 	<a href='https://plus.google.com/share?url=http://codingforentrepreneurs.com'>Google+</a>
 
