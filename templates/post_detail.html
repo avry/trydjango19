@@ -18,7 +18,7 @@
 
 	<a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/">Facebook</a>
 
-	<a href="https://twitter.com/home?status={{ instance.content|urlify }}%20">Twitter</a> <!--this uses a custom filter that we implemented -->
+	<a href="https://twitter.com/home?status={{ instance.content|urlify|truncatechars:20 }}%20">Twitter</a> <!--this uses a custom filter(urlify) that we implemented as well as a built-in filter(truncatechars) -->
 
 	<a href='https://plus.google.com/share?url=http://codingforentrepreneurs.com'>Google+</a>
 
