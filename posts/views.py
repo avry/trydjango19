@@ -12,8 +12,8 @@ from . models import Post
 
 
 def post_create(request):
-	if not request.user.is_staff or not request.user.is_superuser:
-		raise Http404
+	# if not request.user.is_staff or not request.user.is_superuser:
+	# 	raise Http404 #unnecessary. As long as they authenticated, they may post
 
 	if not request.user.is_authenticated:
 		raise Http404
@@ -77,7 +77,9 @@ def post_list(request):
 
 
 def post_update(request, id=None):
-	if not request.user.is_staff or not request.user.is_superuser:
+	# if not request.user.is_staff or not request.user.is_superuser:
+	# 	raise Http404
+	if not request.user.is_authenticated:
 		raise Http404
 	instance = get_object_or_404(Post, id = id)
 
@@ -102,7 +104,9 @@ def post_update(request, id=None):
 
 
 def post_delete(request, id=None):
-	if not request.user.is_staff or not request.user.is_superuser:
+	# if not request.user.is_staff or not request.user.is_superuser:
+	# 	raise Http404
+	if not request.user.is_authenticated:
 		raise Http404
 	instance = get_object_or_404(Post, id = id)
 	instance.delete()
