@@ -9,7 +9,7 @@
 		{% endif %}
 		<div class="card-body">
 			<!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-	    	<h5 class="card-title"><a href = '{% url "posts:detail" objs.id %}'>{{ objs.title }}</a> <small>{{ objs.timestamp|timesince }}</small></h5>
+	    	<h5 class="card-title"><a href = '{% url "posts:detail" objs.id %}'>{{ objs.title }}</a> <small>{{ objs.publish|timesince }}</small></h5>
             {% if objs.user %}
                 <p>Author: {{ objs.user }}</p>
             {% endif %}

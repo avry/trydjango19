@@ -11,7 +11,7 @@
 	<img src='{{ instance.image.url }}' class='img-responsive' />
 	{% endif %}
 
-	<h1>{{ title }}<small>{{ instance.timestamp|timesince }}</small></h1> <!--this is a built-in filter that is provided -->
+	<h1>{{ title }}<small>{{ instance.publish|timesince }}</small></h1> <!--this is a built-in filter that is provided -->
 
 	<p>Author: {{ instance.user }}</p>
 
