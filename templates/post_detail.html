@@ -13,12 +13,14 @@
 
 	<h1>{{ title }}<small>{{ instance.timestamp|timesince }}</small></h1> <!--this is a built-in filter that is provided -->
 
-	<p>Author: {{ instance.user }}
+	<p>Author: {{ instance.user }}</p>
 
 	{{ instance.content|linebreaks }}<br/>
 
 	{{ share_string }}
 
+
+	<!-- must note that now we should have made it such that  we have the 'request.build_absolute_url function which we could use to get the url for social media feeds to work right. -->
 	<a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/">Facebook</a>
 
 	<a href="https://twitter.com/home?status={{ instance.content|urlify|truncatechars:20 }}%20">Twitter</a> <!--this uses a custom filter(urlify) that we implemented as well as a built-in filter(truncatechars) -->
@@ -31,6 +33,11 @@
 
 
 	<a href = '{% url "posts:list" %}'>back</a>
+
+
+	</hr>
+	<!-- must note that now we should have made it such that  we have the 'request.build_absolute_url function which we could use to get the url to the right website for comments to work. -->
+	<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
 
 </div>
 
