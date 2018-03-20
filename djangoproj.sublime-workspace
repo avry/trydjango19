@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"Ht",
+				"Http404"
+			],
+			[
+				"pre",
+				"pre_save_post_receiver"
+			],
+			[
+				"page",
+				"page_request_var"
+			],
+			[
 				"STA",
 				"STATIC_ROOT"
 			],
@@ -502,57 +514,34 @@
 			[
 				"ex",
 				"ExploreExploit"
-			],
-			[
-				"max",
-				"max_q"
-			],
-			[
-				"est",
-				"est_q"
-			],
-			[
-				"feature",
-				"features_old"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "<!--DOCTYPE html -->\n<html>\n<head>\n<title>{% block head_title %}Try Django 1.9{% endblock head_title %}</title>\n</head>\n<body>\n{% include \"messages_display.html\" %}\n<div class='container'>\n{% block content %}\n{% endblock content %}\n</div>\n</body>\n</html> ",
-			"file": "templates/base.html",
-			"file_size": 266,
-			"file_write_time": 131654891860029149,
+			"file": "posts/models.py",
 			"settings":
 			{
-				"buffer_size": 255,
+				"buffer_size": 1328,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "posts/__init__.py",
+			"file": "templates/post_detail.html",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "trydjango19/settings.py",
-			"settings":
-			{
-				"buffer_size": 3361,
+				"buffer_size": 1327,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "trydjango19/urls.py",
+			"file": "posts/views.py",
 			"settings":
 			{
-				"buffer_size": 1014,
+				"buffer_size": 2752,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -591,26 +580,33 @@
 	"expanded_folders":
 	[
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/media_cdn",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts",
-		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/static_cdn",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/templatetags",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/trydjango19"
 	],
 	"file_history":
 	[
-		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates/messages_display.html",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/templatetags/urlify.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/templatetags/__init__.py",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates/post_form.html",
-		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/urls.py",
-		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/views.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/trydjango19/settings.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates/base.html",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates/post_detail.html",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates/post_list.html",
-		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/forms.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/views.py",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/models.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/static/css/base.css",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/static_cdn/css/base.css",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/migrations/0002_auto_20180315_0833.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/forms.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/trydjango19/urls.py",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates/messages_display.html",
+		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/urls.py",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/templates/index.html",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/crud.md",
-		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/trydjango19/settings.py",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/admin.py",
-		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/trydjango19/urls.py",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/.gitignore",
 		"/C/Users/TheAspiredOne/Desktop/dev/trydjango19/posts/tests.py",
 		"/C/Users/TheAspiredOne/Desktop/dev/mysite/polls/models.py",
@@ -719,13 +715,7 @@
 		"/C/Users/TheAspiredOne/Desktop/366/A6/.gitignore",
 		"/C/Users/TheAspiredOne/Desktop/366/A6/RandomWalk_A6/RandomWalk_A6/tiles3.py",
 		"/C/Users/TheAspiredOne/Desktop/366/A6/RandomWalk_A6/RandomWalk_A6/rndmwalk_policy_evaluation.py",
-		"/C/Users/TheAspiredOne/Downloads/p1",
-		"/C/Users/TheAspiredOne/Downloads/p3.pdf",
-		"/C/Users/TheAspiredOne/Desktop/366/A5/README.md",
-		"/C/Users/TheAspiredOne/Desktop/366/A5/prior_sweep_agent.npy",
-		"/C/Users/TheAspiredOne/Desktop/366/A5/prior_sweep_agent.py",
-		"/C/Users/TheAspiredOne/Desktop/396/A4/results_H",
-		"/C/Users/TheAspiredOne/Desktop/396/A4/results_0"
+		"/C/Users/TheAspiredOne/Downloads/p1"
 	],
 	"find":
 	{
@@ -859,24 +849,53 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "templates/base.html",
+					"file": "posts/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 255,
+						"buffer_size": 1328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								255,
-								255
+								1272,
+								1272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/post_detail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								585,
+								585
 							]
 						],
 						"settings":
@@ -891,91 +910,32 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "posts/__init__.py",
-					"semi_transient": true,
+					"buffer": 2,
+					"file": "posts/views.py",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 2752,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2099,
+								2099
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1652.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "trydjango19/settings.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3361,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3361,
-								3361
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3010.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "trydjango19/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1014,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								914,
-								914
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1058,7 +1018,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 456.0,
+	"side_bar_width": 400.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

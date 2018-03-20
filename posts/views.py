@@ -14,10 +14,15 @@ from . models import Post
 def post_create(request):
 	if not request.user.is_staff or not request.user.is_superuser:
 		raise Http404
+
+	if not request.user.is_authenticated:
+		raise Http404
+
 	form = PostForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
 		print("valid")
 		instance = form.save(commit=False) #form is saved
+		instance.user = request.user
 		instance.save() #saves into database
 		messages.success(request, "Successfully Created")
 		return HttpResponseRedirect(reverse('posts:detail', args=(instance.id,)))
