@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
+from django.utils import timezone
 
 from . forms import PostForm
 from . models import Post
@@ -50,7 +51,7 @@ def post_detail(request, id=None):
 
 
 def post_list(request):
-	queryset_list = Post.objects.all()#.order_by("-timestamp")
+	queryset_list = Post.objects.active()#.order_by("-timestamp")
 	paginator = Paginator(queryset_list, 10) # Show 25 contacts per page
 
 	page_request_var = 'page'
