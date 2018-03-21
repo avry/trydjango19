@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 from django.utils import timezone
+from django.db.models import Q
 
 from . forms import PostForm
 from . models import Post
@@ -52,8 +53,17 @@ def post_detail(request, id=None):
 
 def post_list(request):
 	queryset_list = Post.objects.active()#.order_by("-timestamp")
-	paginator = Paginator(queryset_list, 10) # Show 25 contacts per page
+	
+	query =  request.GET.get("query")
+	if query:
+		queryset_list = queryset_list.filter(
+			Q(title__icontains=query) |
+			Q(content__icontains=query) |
+			Q(user__first_name__icontains=query) |
+			Q(user__last_name__icontains=query)
+			).distinct()
 
+	paginator = Paginator(queryset_list, 2) # Show 25 contacts per page
 	page_request_var = 'page'
 	page = request.GET.get(page_request_var)
 	queryset = paginator.get_page(page)
